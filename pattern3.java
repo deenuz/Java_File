@@ -1,22 +1,39 @@
-import java.util.Scanner;
-public class pattern3 {
-public static void main(String []args){
-    try (Scanner sc = new Scanner(System.in)) {
-        System.out.print("Enter any number: ");
 
-        int n= sc.nextInt();
-        for(int i=0;i<n;i++){
-            for(int j=0;j<n;j++){
+* * * * *
+*       *
+* * * * *
+*       *
+*       * 
+
+    
+import java.util.Scanner;
+
+public class Pattern {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter any number");
+        int n = scan.nextInt();
+
+        Pattern p = new Pattern();
+        p.printPattern(n);
+
+        scan.close();
+    }
+
+
+    public void printPattern(int n){
+         
+        for(int i = 0; i<n; i++){
+            for(int j = 0; j<n; j++){
                 if(i==0||i==(n-1)/2||j==0||j==(n-1)){
-                    System.out.print("*");
+                    System.out.print("* ");
                 }else{
-                    System.out.print(" ");
+                    System.out.print("  ");
                 }
             }
-            System.out.println();
-           
-   
+
+            System.out.println("");
         }
-    }
-}
+    }    
 }
